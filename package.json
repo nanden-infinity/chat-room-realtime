@@ -1,0 +1,29 @@
+{
+  "name": "project-room-real-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run dev:css & webpack serve --mode development",
+    "dev:css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/output.css --watch",
+    "build": "webpack --mode production && npm run build:css",
+    "build:css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/output.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "date-fns": "^4.4.0",
+    "firebase": "^12.19.0",
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "html-webpack-plugin": "^5.6.8",
+    "tailwindcss": "^4.3.3",
+    "webpack-dev-server": "^6.0.0"
+  }
+}
